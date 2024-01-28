@@ -19,9 +19,9 @@
             <td th:text="${data.name}"></td>
             <td th:text="${data.population}"></td>
             <!-- 詳細へのリンク -->
-　　　　　　　　　　　　<td><a th:href="@{/country/detail?code={code}(code=${data.code})}">詳細</a></td>
+            <td><a th:href="@{'/country/detail/' + ${data.code} + '/'}">詳細</a></td>
             <!-- 削除へのリンク -->
-            <td><a th:href="@{/country/delete?code={code}(code=${data.code})}">削除</a></td>
+             <td><a th:href="@{'/country/delete/' + ${data.code} + '/' }">削除</a></td>
         </tr>
     </table>
 </body>
